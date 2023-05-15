@@ -3,7 +3,9 @@ import React from "react"
 const UserProfile = ({ user }) => {
     return (
         <div>
-            <h1>This is a page built specifically for a user to see</h1>
+            <h3>Account Information</h3>
+            <h4>Your Email:</h4>
+            <p>{user.email}</p>
         </div>
     )
 }

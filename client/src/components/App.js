@@ -10,6 +10,7 @@ import TopBar from "./layout/TopBar";
 
 import AuthenticatedRoute from "./authentication/AuthenticatedRoute"
 import UserProfile from "./UserProfile"
+import UserMainPage from "./UserMainPage"
 
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -36,6 +37,7 @@ const App = (props) => {
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
         <AuthenticatedRoute exact path="/profile" component={UserProfile} user={currentUser} />
+        <AuthenticatedRoute exact path="/welcome" component={UserMainPage} user={currentUser} />
       </Switch>
     </Router>
   );
