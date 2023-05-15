@@ -11,6 +11,7 @@ import TopBar from "./layout/TopBar";
 import AuthenticatedRoute from "./authentication/AuthenticatedRoute"
 import UserProfile from "./UserProfile"
 import UserMainPage from "./UserMainPage"
+import NewRouteForm from "./NewRouteForm";
 
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -38,6 +39,7 @@ const App = (props) => {
         <Route exact path="/user-sessions/new" component={SignInForm} />
         <AuthenticatedRoute exact path="/profile" component={UserProfile} user={currentUser} />
         <AuthenticatedRoute exact path="/welcome" component={UserMainPage} user={currentUser} />
+        <AuthenticatedRoute exact path="/add-a-route" component={NewRouteForm} user={currentUser} />
       </Switch>
     </Router>
   );
