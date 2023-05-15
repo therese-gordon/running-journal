@@ -20,7 +20,7 @@ const NewRouteForm = () => {
             <label htmlFor="distance">Distance</label>
             <input type="number" name="distance"/>
             <select name="units">{dropdown}</select>
-            <input type="submit" value="Submit"/>
+            <input type="submit" className="button" value="Submit"/>
         </form>
         </>
     )
