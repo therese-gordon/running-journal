@@ -24,3 +24,17 @@
 .mainPageLinks {
   padding: 50px;
 }
+
+.form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 6px;
+  background-color: #68CD94;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.time-field {
+  width: 31%;
+  display: inline-flex;
+}
