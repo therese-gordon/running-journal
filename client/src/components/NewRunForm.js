@@ -4,16 +4,20 @@ const NewRunForm = () => {
 
     return (
         <>
-        <form>
+        <form className="form-container">
             <h3>Enter a New Run</h3>
             <label htmlFor="name">Route Name</label>
-            <select name="name">Option</select>
+            <select name="name"></select>
             <label htmlFor="date">Date</label>
             <input type="date" name="date"></input>
             <label htmlFor="time">Time</label>
-            <input type="text" name="time"></input>
-            <label htmlFor="distance">Distance</label>
-            <input type="text" name="distance"></input>
+            <div className="time-field">
+            <input type="number" min="0" max="24" name="time"></input>
+            <label htmlFor="time">:</label>
+            <input type="number" min="0" max="59" name="time"></input>
+            <label htmlFor="time">:</label>
+            <input type="number" min="0" max="59" name="time"></input>
+            </div>
             <label htmlFor="notes">Notes</label>
             <textarea name="notes"></textarea>
             <input type="submit" className="button" value="Submit"/>
