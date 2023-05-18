@@ -47,6 +47,7 @@
     "webpack-hot-middleware": "^2.25.3"
   },
   "dependencies": {
+    "@riderize/passport-strava-oauth2": "^2.0.0",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
     "cookie-session": "^2.0.0",

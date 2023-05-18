@@ -32,7 +32,13 @@ sessionRouter.get("/current", async (req, res) => {
 });
 
 sessionRouter.delete("/", (req, res) => {
-  req.logout();
+  console.log("YO")
+  console.log(req.cookies)
+  // res.clearCookie('user');
+// 
+  // req.logout((error) => {
+  //   console.log(error)
+  // });
   res.status(200).json({ message: "User signed out" });
 });
 
