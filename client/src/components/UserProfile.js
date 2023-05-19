@@ -1,11 +1,17 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
 const UserProfile = ({ user }) => {
+
+    // const []
+
+    // useEffect(() => {
+
+    // }, [])
     return (
         <div>
             <h3>Account Information</h3>
-            <h4>Your Email:</h4>
-            <p>{user.email}</p>
+            <p>Strava Id: {user.stravaId}</p>
+            {/* <p>First Name: {user.firstname}</p> */}
         </div>
     )
 }
