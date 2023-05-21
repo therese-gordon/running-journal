@@ -6,20 +6,14 @@ const NewRunForm = () => {
         <>
         <form className="form-container">
             <h3>Enter a New Run</h3>
-            <label htmlFor="name">Route Name</label>
-            <select name="name"></select>
-            <label htmlFor="date">Date</label>
-            <input type="date" name="date"></input>
-            <label htmlFor="time">Time</label>
-            <div className="time-field">
-            <input type="number" min="0" max="24" name="time"></input>
-            <label htmlFor="time">:</label>
-            <input type="number" min="0" max="59" name="time"></input>
-            <label htmlFor="time">:</label>
-            <input type="number" min="0" max="59" name="time"></input>
-            </div>
-            <label htmlFor="notes">Notes</label>
-            <textarea name="notes"></textarea>
+            <label htmlFor="name" className="form-title">Route Name</label>
+            <select name="name" className="form-input"></select>
+            <label htmlFor="date" className="form-title">Date</label>
+            <input type="date" name="date" className="form-input"></input>
+            <label htmlFor="time" className="form-title">Time</label>
+            <input type="text" name="time" className="form-input"></input>
+            <label htmlFor="notes" className="form-title">Notes</label>
+            <textarea name="notes" className="form-input"></textarea>
             <input type="submit" className="button" value="Submit"/>
         </form>
         </>

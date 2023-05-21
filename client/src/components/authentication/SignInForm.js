@@ -77,24 +77,25 @@ const SignInForm = () => {
 
   return (
     <div className="grid-container">
-      <h1>Sign In</h1>
+      <h1 className="sign-in-title">Sign In</h1>
       {credentialsErrors ? <p className="callout alert">{credentialsErrors}</p> : null}
       <form onSubmit={onSubmit}>
         <div>
-          <label>
+          <label className="sign-in-title">
             Email
-            <input type="text" name="email" value={userPayload.email} onChange={onInputChange} />
+            <input type="text" name="email" value={userPayload.email} onChange={onInputChange} className="sign-in-input"/>
             <FormError error={errors.email} />
           </label>
         </div>
         <div>
-          <label>
+          <label className="sign-in-title">
             Password
             <input
               type="password"
               name="password"
               value={userPayload.password}
               onChange={onInputChange}
+              className="sign-in-input"
             />
             <FormError error={errors.password} />
           </label>
