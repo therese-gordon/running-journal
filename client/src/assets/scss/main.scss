@@ -11,17 +11,91 @@
 :root {
   -moz-tab-size: 4;
   tab-size: 4;
+  --green1: #cff09e;
+  --green2: #a8dba8;
+  --green3: #79bd9a;
+  --green4: #3b8686;
+}
+
+body {
+  background-color: var(--green2);
+  font-family: Helvetica;
+}
+
+.welcome-page {
+  text-align: center;
+  padding: 100px;
+  color: var(--green4);
+}
+
+.sign-in-title {
+  color: var(--green4);
+}
+
+.sign-in-input {
+  border: none;
+  color: var(--green4);
 }
 
 .top-bar {
-  background-color: #68CD94;
+  background-color: var(--green4);
 }
 
 .top-bar ul {
-  background-color: #68CD94;
+  background-color: var(--green4);
 }
 
-.mainPageLinks {
+a {
+  color: var(--green2);
+}
+
+a:hover {
+  color: var(--green3);
+}
+
+a:visited {
+  color: var(--green2);
+}
+
+.button {
+  background-color: var(--green3);
+  color: var(--green4);
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: var(--green4);
+  color: var(--green3);
+}
+
+.menu-text {
+  font-size: 25px;
+  color: var(--green2);
+}
+
+.menu-text:hover {
+  color: var(--green2);
+}
+
+.main-page-links {
+  padding: 10px;
+  color: var(--green2);
+  background-color: var(--green4);
+  border-radius: 5px; 
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  width: 500px; 
+  margin: 10px auto 10px auto;
+}
+
+.main-page-links:hover {
+  color: var(--green3);
+}
+
+.main-page-title {
+  color: var(--green4);
+  text-align: center;
   padding: 50px;
 }
 
@@ -29,12 +103,60 @@
   max-width: 600px;
   margin: 50px auto;
   padding: 30px;
-  border-radius: 6px;
-  background-color: #68CD94;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: var(--green4);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+  color: var(--green2);
+  text-align: center;
 }
 
-.time-field {
-  width: 31%;
-  display: inline-flex;
+.form-title {
+  color: var(--green2);
+  text-align: left;
 }
+
+.form-input {
+  background-color: var(--green2);
+  border: none;
+  color: var(--green4);
+}
+
+.profile-title {
+  color: var(--green2);
+  background-color: var(--green4);
+  border-radius: 5px;
+  border: 20px;
+  padding: 20px;
+  margin: 20px;
+  max-width: 400px;
+}
+
+.profile-content {
+  color: var(--green2);
+  background-color: var(--green4);
+  border-radius: 5px;
+  border: 20px;
+  padding: 20px;
+  margin: 20px;
+  max-width: 400px;
+}
+
+.list-page {
+  color: var(--green4);
+  margin: 20px;
+}
+
+.list-items {
+  background-color: var(--green4);
+  color: var(--green2);
+  padding: 20px;
+  margin: 20px;
+  border: 20px;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+.list-title {
+  text-align: center;
+}
+

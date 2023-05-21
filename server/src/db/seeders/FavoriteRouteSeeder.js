@@ -9,7 +9,7 @@ class FavoriteRouteSeeder {
                 userId: 1
             },
             {
-                name: "To park and back with hill",
+                name: "River Run",
                 distance: 4,
                 userId: 2
             }
