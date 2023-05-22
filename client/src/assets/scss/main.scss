@@ -15,6 +15,7 @@
   --green2: #a8dba8;
   --green3: #79bd9a;
   --green4: #3b8686;
+  --orange: #ff5f2e; 
 }
 
 body {
@@ -35,6 +36,11 @@ body {
 .sign-in-input {
   border: none;
   color: var(--green4);
+}
+
+#strava-login {
+  background-color: var(--orange);
+  color: #FFFFFF;
 }
 
 .top-bar {
