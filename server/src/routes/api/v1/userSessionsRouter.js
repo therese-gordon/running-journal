@@ -1,5 +1,6 @@
 import express from "express";
 import passport from "passport";
+import got from "got";
 
 const sessionRouter = new express.Router();
 
@@ -25,6 +26,15 @@ sessionRouter.post("/", (req, res, next) => {
 
 sessionRouter.get("/current", async (req, res) => {
   if (req.user) {
+    const response = await got ({
+        url: `https://www.strava.com/api/v3/athletes/${req.user.stravaId}}/routes`,
+        headers: {
+          "Authorization": `Bearer ${req.user.accessToken}`
+        }
+      }
+    )
+    console.log(response.body, "response body")
+
     res.status(200).json(req.user);
   } else {
     res.status(401).json(undefined);
@@ -33,6 +43,8 @@ sessionRouter.get("/current", async (req, res) => {
 
 sessionRouter.delete("/", (req, res) => {
   req.logout();
+  console.log("test")
+  console.log(req.cookies)
   res.status(200).json({ message: "User signed out" });
 });
 
