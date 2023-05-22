@@ -11,7 +11,7 @@ const UserProfile = ({ user }) => {
         <div>
             <h3>Account Information</h3>
             <p>Strava Id: {user.stravaId}</p>
-            {/* <p>First Name: {user.firstname}</p> */}
+            <p>{user.firstname}</p>
         </div>
     )
 }
