@@ -32,10 +32,10 @@ const FavoriteRoutesList = () => {
     })
 
     return (
-        <>
-        <h2>Your Saved Routes</h2>
-        <div>{routesList}</div>
-        </>
+        <div className="list-page">
+        <h3 className="list-title">Your Saved Routes</h3>
+        <p className="list-items">{routesList}</p>
+        </div>
     )
 }
 
