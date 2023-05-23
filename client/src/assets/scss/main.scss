@@ -15,11 +15,12 @@
   --green2: #a8dba8;
   --green3: #79bd9a;
   --green4: #3b8686;
-  --orange: #ff5f2e; 
+  --orange1: #ff5f2e;
+  --orange2: #fdb099; 
 }
 
 body {
-  background-color: var(--green2);
+  background-color: #FFFFFF;
   font-family: Helvetica;
 }
 
@@ -39,8 +40,12 @@ body {
 }
 
 #strava-login {
-  background-color: var(--orange);
+  background-color: var(--orange1);
   color: #FFFFFF;
+}
+
+#strava-login:hover {
+  color: var(--orange2);
 }
 
 .top-bar {
@@ -122,7 +127,7 @@ a:visited {
 }
 
 .form-input {
-  background-color: var(--green2);
+  // background-color: var(--green2);
   border: none;
   color: var(--green4);
 }
