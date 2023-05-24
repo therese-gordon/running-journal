@@ -9,8 +9,7 @@ exports.up = async (knex) => {
     return knex.schema.alterTable("users", (table) => {
         table.dropColumn("email")
         table.dropColumn("cryptedPassword")
-    })    
-    
+    })        
 }
 
 /**

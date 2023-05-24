@@ -8,11 +8,10 @@ class FavoriteRoute extends Model {
     static get jsonSchema() {
         return {
             type: "object",
-            required: ["name", "distance", "userId"],
+            required: ["name", "distance"],
             properties: {
                 name: { type: "string"},
                 distance: { type: ["integer", "string"]},
-                userId: { type: ["integer", "string"]}
             }
         }
     }

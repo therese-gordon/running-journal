@@ -9,20 +9,21 @@ const stravaAuthHandler = (accessToken, refreshToken, profile, done) => {
         .findOne({ stravaId: profile?.id })
         .then((user) => {
             if (user) {
-                user.$query().patchAndFetch({accessToken: accessToken}).then((user) => {
-                    return done(null, user)
-            })
-        }
-
-    User.query()
-    .insertAndFetch({
-        stravaId: profile.id,
-        accessToken: accessToken,
-        }).then((user) => {
-            return done(null, user)
-            })    
-        })
-    }
+                console.log("User Id of strava logged in user", user.id)
+                user.$query().patchAndFetch({accessToken: accessToken}).then((user) => { return done(null, user) }) 
+            } else {
+                console.log("New User")
+                User.query()
+                .insertAndFetch({
+                    stravaId: profile.id,
+                    accessToken: accessToken,
+                    }).then((user) => { 
+                        console.log(user.id)
+                        return done(null, user) 
+                    })    
+            }
+        }) 
+}
 
 const stravaStrategy = new StravaStrategy({
         clientID: process.env.STRAVA_CLIENT_ID,
