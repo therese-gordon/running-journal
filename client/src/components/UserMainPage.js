@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 const UserMainPage = ({ user }) => {
+
     return (
         <div>
             <h3 className="main-page-title">Welcome to your main page</h3>

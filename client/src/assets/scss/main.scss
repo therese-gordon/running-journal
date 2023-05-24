@@ -11,7 +11,6 @@
 :root {
   -moz-tab-size: 4;
   tab-size: 4;
-  --green1: #cff09e;
   --green2: #a8dba8;
   --green3: #79bd9a;
   --green4: #3b8686;
@@ -50,10 +49,12 @@ body {
 
 .top-bar {
   background-color: var(--green4);
+  border-radius: 5px;
 }
 
 .top-bar ul {
   background-color: var(--green4);
+  border-radius: 5px;
 }
 
 a {
