@@ -72,9 +72,9 @@ const NewRouteForm = () => {
             />
             <label htmlFor="distance" className="form-title">Distance (miles)</label>
             <input 
-                type="number" 
+                type="text" 
                 min="0" 
-                name="distance" 
+                name="distance"
                 className="form-input"
                 value={routeData.distance}
                 onChange={handleChange}

@@ -11,7 +11,7 @@ class FavoriteRoute extends Model {
             required: ["name", "distance"],
             properties: {
                 name: { type: "string"},
-                distance: { type: ["integer", "string"]},
+                distance: { type: "string"},
             }
         }
     }
