@@ -33,8 +33,6 @@ sessionRouter.get("/current", async (req, res) => {
         }
       }
     )
-    console.log(response.body, "response body")
-
     res.status(200).json(req.user);
   } else {
     res.status(401).json(undefined);
@@ -43,8 +41,6 @@ sessionRouter.get("/current", async (req, res) => {
 
 sessionRouter.delete("/", (req, res) => {
   req.logout();
-  console.log("test")
-  console.log(req.cookies)
   res.status(200).json({ message: "User signed out" });
 });
 

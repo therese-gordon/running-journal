@@ -81,12 +81,22 @@ a:visited {
 }
 
 .menu-text {
-  font-size: 25px;
   color: var(--green2);
 }
 
 .menu-text:hover {
   color: var(--green2);
+}
+
+#app-name {
+  color: var(--green2);
+  font-style: oblique;
+}
+
+#app-name-welcome {
+  color: var(--green4);
+  font-style: oblique;
+  font-weight: bold;
 }
 
 .main-page-links {
@@ -128,10 +138,14 @@ a:visited {
 }
 
 .form-input {
-  // background-color: var(--green2);
   border: none;
-  color: var(--green4);
+  // color: var(--green4);
 }
+
+// #time-input {
+//   display: flex;
+//   flex-direction: row;
+// }
 
 .profile-title {
   color: var(--green2);

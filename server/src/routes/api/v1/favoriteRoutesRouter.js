@@ -16,21 +16,16 @@ favoriteRoutesRouter.get("/", async (req, res) => {
 })
 
 favoriteRoutesRouter.post("/", async (req, res) => {    
-    const { body } = req
-    console.log(body, "body")
+    const { body } = req    
     const cleanedInput = cleanUserInput(body.favoriteRoute)
     cleanedInput.userId = req.user.id
     try {
         const favoriteRoute = await FavoriteRoute.query().insertAndFetch(cleanedInput)
         return res.status(201).json({ favoriteRoute })
     } catch (error) {
-        console.log(error)
         if (error instanceof ValidationError) {
-            console.log(error.data)
             return res.status(422).json({ errors: error.data})
-        }
-        
-        return res.status(500).json({ error: error})
+        } return res.status(500).json({ error: error})
     }
 })
 
