@@ -11,9 +11,9 @@
 :root {
   -moz-tab-size: 4;
   tab-size: 4;
-  --green2: #a8dba8;
-  --green3: #79bd9a;
-  --green4: #3b8686;
+  --color1: #1f4e5f;
+  --color2: #79a8a9;
+  --color3: #aacfd0;
   --orange1: #ff5f2e;
   --orange2: #fdb099; 
 }
@@ -25,17 +25,22 @@ body {
 
 .welcome-page {
   text-align: center;
-  padding: 100px;
-  color: var(--green4);
+  padding: 50px;
+  position: relative;
 }
 
-.sign-in-title {
-  color: var(--green4);
+.welcome-title {
+  position: absolute;
+  top: 450px; 
+  left: 0; 
+  width: 100%;
+  color: #FFFFFF;
 }
 
-.sign-in-input {
-  border: none;
-  color: var(--green4);
+.welcome-image {
+  width: 800px;
+  height: auto;
+  border-radius: 5px;
 }
 
 #strava-login {
@@ -48,75 +53,73 @@ body {
 }
 
 .top-bar {
-  background-color: var(--green4);
+  background-color: var(--color1);
   border-radius: 5px;
 }
 
 .top-bar ul {
-  background-color: var(--green4);
+  background-color: var(--color1);
   border-radius: 5px;
 }
 
 a {
-  color: var(--green2);
+  color: #FFFFFF;
 }
 
 a:hover {
-  color: var(--green3);
+  color: var(--color3);
 }
 
 a:visited {
-  color: var(--green2);
+  color: var(--color2);
 }
 
 .button {
-  background-color: var(--green3);
-  color: var(--green4);
+  background-color: var(--color2);
+  color: #FFFFFF;
   border-radius: 5px;
 }
 
 .button:hover {
-  background-color: var(--green4);
-  color: var(--green3);
+  background-color: var(--color2);
+  color: var(--color3);
 }
 
 .menu-text {
-  color: var(--green2);
+  color: var(--color2);
 }
 
 .menu-text:hover {
-  color: var(--green2);
+  color: var(--color2);
 }
 
 #app-name {
-  color: var(--green2);
+  color: #FFFFFF;
   font-style: oblique;
 }
 
 #app-name-welcome {
-  color: var(--green4);
   font-style: oblique;
   font-weight: bold;
 }
 
 .main-page-links {
   padding: 10px;
-  color: var(--green2);
-  background-color: var(--green4);
+  color: var(--color2);
+  background-color: var(--color1);
   border-radius: 5px; 
   font-size: 15px;
   display: flex;
   justify-content: center;
-  width: 500px; 
+  width: 250px; 
   margin: 10px auto 10px auto;
 }
 
 .main-page-links:hover {
-  color: var(--green3);
+  color: var(--color3);
 }
 
 .main-page-title {
-  color: var(--green4);
   text-align: center;
   padding: 50px;
 }
@@ -126,63 +129,76 @@ a:visited {
   margin: 50px auto;
   padding: 30px;
   border-radius: 5px;
-  background-color: var(--green4);
+  background-color: var(--color1);
   box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
-  color: var(--green2);
+  color: var(--color2);
   text-align: center;
 }
 
 .form-title {
-  color: var(--green2);
+  color: var(--color2);
   text-align: left;
 }
 
 .form-input {
   border: none;
-  // color: var(--green4);
 }
 
-// #time-input {
-//   display: flex;
-//   flex-direction: row;
-// }
-
 .profile-title {
-  color: var(--green2);
-  background-color: var(--green4);
-  border-radius: 5px;
-  border: 20px;
-  padding: 20px;
+  text-align: center;
   margin: 20px;
-  max-width: 400px;
 }
 
 .profile-content {
-  color: var(--green2);
-  background-color: var(--green4);
-  border-radius: 5px;
-  border: 20px;
-  padding: 20px;
-  margin: 20px;
+  border: 2px solid var(--color1);
   max-width: 400px;
-}
-
-.list-page {
-  color: var(--green4);
-  margin: 20px;
-}
-
-.list-items {
-  background-color: var(--green4);
-  color: var(--green2);
+  margin: 0 auto;
   padding: 20px;
-  margin: 20px;
-  border: 20px;
-  max-width: 400px;
   border-radius: 5px;
 }
 
 .list-title {
   text-align: center;
+  margin: 20px;
 }
+
+.list-item-ro {
+  width: 400px;
+  height: 75px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--color1);
+}
+
+.list-items-ro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.list-item-ru {
+  width: 600px;
+  height: 150px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--color1);
+}
+
+.list-items-ru {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+
+
+
 
