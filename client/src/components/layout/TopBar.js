@@ -6,21 +6,10 @@ const TopBar = ({ user }) => {
   const unauthenticatedListItems = [
     <li key="strava-sign-in">
       <a href="/auth/strava" id="strava-login">Sign In with Strava</a>
-    </li>,
-    // <li key="sign-in">
-    //   <Link to="/user-sessions/new">Sign In</Link>
-    // </li>,
-    // <li key="sign-up">
-    //   <Link to="/users/new" className="button">
-    //     Sign Up
-    //   </Link>
-    // </li>,
+    </li>  
   ];
 
   const authenticatedListItems = [
-  //   <li key="strava-sign-in">
-  //   <a href="/auth/strava" id="strava-login">Sign In with Strava</a>
-  // </li>,
     <li key="welcome">
       <Link to="/welcome">My Homepage</Link>
     </li>,
@@ -36,7 +25,7 @@ const TopBar = ({ user }) => {
     <div className="top-bar">
       <div className="top-bar-left">
         <ul className="menu">
-          <li className="menu-text">🏃‍♀️</li>
+          <li className="menu-text" id="app-name">Trail Tale</li>
           <li>
             <Link to="/">Home</Link>
           </li>

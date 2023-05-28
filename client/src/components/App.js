@@ -12,6 +12,7 @@ import NewRouteForm from "./NewRouteForm";
 import NewRunForm from "./NewRunForm";
 import FavoriteRoutesList from "./FavoriteRoutesList";
 import WelcomePage from "./WelcomePage";
+import NewRunsList from "./NewRunsList";
 
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -36,6 +37,7 @@ const App = (props) => {
         <AuthenticatedRoute exact path="/profile" component={UserProfile} user={currentUser} />
         <AuthenticatedRoute exact path="/welcome" component={UserMainPage} user={currentUser} />
         <AuthenticatedRoute exact path="/routes" component={FavoriteRoutesList} user={currentUser} />
+        <AuthenticatedRoute exact path="/runs" component={NewRunsList} user={currentUser} />
         <AuthenticatedRoute exact path="/add-a-route" component={NewRouteForm} user={currentUser} />
         <AuthenticatedRoute exact path="/log-a-run" component={NewRunForm} user={currentUser} />
       </Switch>
