@@ -5,9 +5,7 @@
 /**
  * @param {Knex} knex
  */
-exports.up = async (knex) => {
-    return knex.schema.createTable("")
-}
+exports.up = async (knex) => {}
 
 /**
  * @param {Knex} knex

@@ -4,14 +4,24 @@ class FavoriteRouteSeeder {
     static async seed() {
         const favoriteRoutesData = [
             {
+                name: "Playing Fields Loop",
+                distance: "2.5",
+                userId: 1
+            },
+            {
                 name: "Reservoir Loop",
-                distance: 3,
+                distance: "5.2",
+                userId: 1
+            },
+            {
+                name: "Hilltop Park",
+                distance: "2.55",
                 userId: 1
             },
             {
                 name: "River Run",
-                distance: 4,
-                userId: 2
+                distance: "4.14",
+                userId: 1
             }
         ]
 
