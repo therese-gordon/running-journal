@@ -24,8 +24,8 @@ const FavoriteRoutesList = () => {
     const routesList = favoriteRoutes.map((favoriteRoute) => {
         return (
             <div className="list-item-ro" key={favoriteRoute.id}>
-            <div>Name: {favoriteRoute.name}</div>
-            <div>Miles: {favoriteRoute.distance}</div>
+            <div><span id="bold-words">Name:</span> {favoriteRoute.name}</div>
+            <div><span id="bold-words">Miles:</span> {favoriteRoute.distance}</div>
             <br></br>
             </div> 
         )    
