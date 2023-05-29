@@ -144,6 +144,17 @@ a:visited {
   border: none;
 }
 
+.date-time-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.time-column {
+  flex: 1;
+  margin-right: 10px;
+}
+
 .profile-title {
   text-align: center;
   margin: 20px;
@@ -182,7 +193,7 @@ a:visited {
 
 .list-item-ru {
   width: 600px;
-  height: 150px;
+  height: 200px;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -196,6 +207,10 @@ a:visited {
   padding: 20px;
   margin: 20px;
   border-radius: 5px;
+}
+
+#bold-words {
+  font-weight: bold;
 }
 
 

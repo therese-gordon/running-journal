@@ -3,13 +3,44 @@ import translateServerErrors from "../services/translateServerErrors"
 import ErrorList from "./layout/ErrorList"
 import { Redirect } from "react-router-dom"
 
+const months = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+const days = ["", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"]
+const years = ["", "2023", "2024"]
+
 const NewRunForm = () => {
+
+    const monthsDropDown = months.map(month => {
+        return (
+            <option key={month} value={month}>
+                {month}
+            </option>
+        )
+    })
+
+    const daysDropDown = days.map(day => {
+        return (
+            <option key={day} value={day}>
+                {day}
+            </option>
+        )
+    })
+
+    const yearsDropDown = years.map(year => {
+        return (
+            <option key={year} value={year}>
+                {year}
+            </option>
+        )
+    })
+
     const [runData, setRunData] = useState({
         routeName: "",
-        date: "",
-        hours: "",
-        minutes: "",
-        seconds: "",
+        month: "",
+        day: "",
+        year: "",
+        hours: "0",
+        minutes: "0",
+        seconds: "0",
         notes: ""
 })
 
@@ -75,14 +106,20 @@ const NewRunForm = () => {
                 onChange={handleChange}
             />
             <label htmlFor="date" className="form-title">Date</label>
-            <input 
-                type="date" 
-                name="date" 
-                className="form-input"
-                value={runData.date}
-                onChange={handleChange}
-            />
-            <label htmlFor="time" className="form-title">Hours</label>
+            <div className="date-time-row">
+            <select name="month" value={runData.month} onChange={handleChange}>
+                {monthsDropDown}
+            </select>
+            <select name="day" value={runData.day} onChange={handleChange}>
+                {daysDropDown}
+            </select>
+            <select name="year" value={runData.year} onChange={handleChange}>
+                {yearsDropDown}
+            </select>
+            </div>
+            <div className="date-time-row">
+                <div className="time-column">
+                    <label htmlFor="hours" className="form-title">Hours</label>
             <input  
                 type="text"
                 name="hours" 
@@ -92,7 +129,9 @@ const NewRunForm = () => {
                 value={runData.hours}
                 onChange={handleChange}
             />
-            <label htmlFor="time" className="form-title">Minutes</label>
+            </div>
+            <div className="time-column">
+                    <label htmlFor="hours" className="form-title">Minutes</label>
             <input 
                 type="text" 
                 name="minutes" 
@@ -102,7 +141,9 @@ const NewRunForm = () => {
                 value={runData.minutes}
                 onChange={handleChange}
             />
-            <label htmlFor="time" className="form-title">Seconds</label>
+            </div>
+            <div className="time-column">
+                    <label htmlFor="hours" className="form-title">Seconds</label>
             <input 
                 type="text" 
                 name="seconds" 
@@ -112,10 +153,13 @@ const NewRunForm = () => {
                 value={runData.seconds}
                 onChange={handleChange}
             />
+            </div>
+            </div>
             <label htmlFor="notes" className="form-title">Notes</label>
             <textarea
                 type="text" 
                 name="notes" 
+                maxLength="300"
                 className="form-input"
                 value={runData.notes}
                 onChange={handleChange}

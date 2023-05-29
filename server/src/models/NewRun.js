@@ -10,12 +10,14 @@ class NewRun extends Model {
             type: "object",
             required: [],
             properties: {
-                routeName: { type: "string"},
-                date: { type: "string"},
-                notes: { type: "string"},
-                hours: { type: ["integer", "string"]},
-                minutes: { type: ["integer", "string"]},
-                seconds: { type: ["integer", "string"]},
+                routeName: { type: "string" },
+                month: { type: "string" },
+                day: { type: "string" },
+                year: { type: "string" },
+                notes: { type: "string", maxLength: 300 },
+                hours: { type: ["integer", "string"] },
+                minutes: { type: ["integer", "string"] },
+                seconds: { type: ["integer", "string"] },
             }
         }
     }

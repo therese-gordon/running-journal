@@ -24,10 +24,10 @@ const NewRunsList = () => {
     const runsList = newRuns.map((newRun) => {
         return (
             <div className="list-item-ru" key={newRun.id}>
-            <div>Name: {newRun.routeName}</div>
-            <div>Date: {newRun.date}</div>
-            <div>Time: {newRun.hours}:{newRun.minutes}:{newRun.seconds}</div>
-            <div>Notes: {newRun.notes}</div>
+            <div><span id="bold-words">Name:</span> {newRun.routeName}</div>
+            <div><span id="bold-words">Date:</span> {newRun.month} {newRun.day}, {newRun.year}</div>
+            <div><span id="bold-words">Time: </span>{newRun.hours} hours, {newRun.minutes} minutes, {newRun.seconds} seconds</div>
+            <div><span id="bold-words">Notes:</span> {newRun.notes}</div>
             <br></br>
             </div> 
         )    

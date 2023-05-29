@@ -10,8 +10,8 @@ class FavoriteRoute extends Model {
             type: "object",
             required: ["name", "distance"],
             properties: {
-                name: { type: "string"},
-                distance: { type: "string"},
+                name: { type: "string" },
+                distance: { type: "string" },
             }
         }
     }
