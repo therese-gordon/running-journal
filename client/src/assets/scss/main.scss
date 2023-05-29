@@ -25,22 +25,28 @@ body {
 
 .welcome-page {
   text-align: center;
-  padding: 50px;
+  padding: 20px;
   position: relative;
 }
 
 .welcome-title {
   position: absolute;
-  top: 450px; 
+  top: 400px; 
   left: 0; 
   width: 100%;
   color: var(--color3);
 }
 
 .welcome-image {
-  width: 800px;
+  width: 700px;
   height: auto;
   border-radius: 5px;
+}
+
+.login-info {
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
 }
 
 #strava-login {

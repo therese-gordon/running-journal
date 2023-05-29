@@ -21,7 +21,6 @@ const NewRouteForm = () => {
                 }),
                 body: JSON.stringify({ favoriteRoute: routeData })
             })
-            console.log(response, "response")
             if (!response.ok) {
                 if (response.status === 422) {
                     const body = await response.json()
