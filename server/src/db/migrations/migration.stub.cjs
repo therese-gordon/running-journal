@@ -7,7 +7,6 @@
  */
 exports.up = async (knex) => {}
 
-
 /**
  * @param {Knex} knex
  */
