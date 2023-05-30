@@ -1,4 +1,4 @@
-Trail Tails - Running Journal
+Trail Tales - Running Journal
 
 Description
 
