@@ -34,6 +34,8 @@ const App = (props) => {
       <TopBar user={currentUser} />
       <Switch>
         <Route exact path="/" component={WelcomePage} />
+        <Route exact path="/routes" component={FavoriteRoutesList} />
+        <Route exact path="/runs" component={NewRunsList} />
         <AuthenticatedRoute exact path="/profile" component={UserProfile} user={currentUser} />
         <AuthenticatedRoute exact path="/welcome" component={UserMainPage} user={currentUser} />
         <AuthenticatedRoute exact path="/routes" component={FavoriteRoutesList} user={currentUser} />

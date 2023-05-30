@@ -4,9 +4,15 @@ import SignOutButton from "../authentication/SignOutButton";
 
 const TopBar = ({ user }) => {
   const unauthenticatedListItems = [
+    <li key="routes">
+      <Link to="/routes">Saved Routes</Link>
+    </li>,
+    <li key="runs">
+      <Link to="/runs">Saved Runs</Link>
+    </li>, 
     <li key="strava-sign-in">
       <a href="/auth/strava" id="strava-login">Sign In with Strava</a>
-    </li>  
+    </li>
   ];
 
   const authenticatedListItems = [
