@@ -1,4 +1,4 @@
-Trail Tails - Running Journal
+Trail Tales - Running Journal
 
 Description
 
@@ -9,6 +9,9 @@ keeping track of time and distance, users can add notes to record their experien
 TODO
 
 -Add a new favorite route
+
 -Record a run
+
 -View list of saved routes
+
 -View record of completed runs
