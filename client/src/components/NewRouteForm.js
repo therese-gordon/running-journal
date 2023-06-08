@@ -59,7 +59,7 @@ const NewRouteForm = () => {
     return (
         <>
         <form className="form-container" onSubmit={handleSubmit}>
-            <h3>Add A New Route</h3>
+            <h3 className="form-name">Add A New Route</h3>
             <ErrorList errors={errors} />
             <label htmlFor="name" className="form-title">Route Name</label>
             <input 
