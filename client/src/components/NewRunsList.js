@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react"
 const NewRunsList = () => {
     const [newRuns, setNewRuns] = useState([])
 
-    const fetchFavoriteRuns = async () => {
+    const fetchNewRuns = async () => {
         try {
             const response = await fetch("/api/v1/runs")
             if (response.ok) {
@@ -18,7 +18,7 @@ const NewRunsList = () => {
     }
 
     useEffect(() => {
-        fetchFavoriteRuns()
+        fetchNewRuns()
     }, [])
 
     const runsList = newRuns.map((newRun) => {
