@@ -26,8 +26,8 @@ const stravaAuthHandler = (accessToken, refreshToken, profile, done) => {
 const stravaStrategy = new StravaStrategy({
         clientID: process.env.STRAVA_CLIENT_ID,
         clientSecret: process.env.STRAVA_CLIENT_SECRET,
-        // callbackURL: "http://localhost:3000/auth/strava/callback",
-        callbackURL: "https://running-journal.herokuapp.com/auth/strava/callback",
+        callbackURL: "http://localhost:3000/auth/strava/callback",
+        // callbackURL: "https://running-journal.herokuapp.com/auth/strava/callback",
     },
     stravaAuthHandler
 )
