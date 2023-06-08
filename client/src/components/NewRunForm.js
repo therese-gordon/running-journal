@@ -121,7 +121,7 @@ const [savedRoutesList, setSavedRouteList] = useState([])
     return (
         <>
         <form className="form-container" onSubmit={handleSubmit}>
-            <h3>Enter a New Run</h3>
+            <h3 className="form-name">Enter a New Run</h3>
             <ErrorList errors={errors} />
             <label htmlFor="routeName" className="form-title">Route Name</label>
             <select name="routeName" className="form-input" value={runData.routeName} onChange={handleChange}>

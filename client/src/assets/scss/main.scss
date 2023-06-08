@@ -1,6 +1,7 @@
 @import "./foundation/settings";
 @import "~foundation-sites/scss/foundation";
 @include foundation-everything;
+
 // place global css here
 *,
 *::before,
@@ -15,12 +16,13 @@
   --color2: #79a8a9;
   --color3: #aacfd0;
   --orange1: #ff5f2e;
-  --orange2: #fdb099; 
+  --orange2: #fdb099;
+  --font: Arial;
 }
 
 body {
   background-color: #FFFFFF;
-  font-family: Arial;
+  font-family: var(--font);
 }
 
 .welcome-page {
@@ -35,6 +37,7 @@ body {
   left: 0; 
   width: 100%;
   color: var(--color3);
+  font-family: var(--font);
 }
 
 .welcome-image {
@@ -47,6 +50,7 @@ body {
   text-align: center;
   margin: 20px;
   font-size: 20px;
+  font-family: var(--font);
 }
 
 #strava-login {
@@ -103,11 +107,13 @@ a:visited {
 #app-name {
   color: var(--color3);
   font-style: oblique;
+  font-family: var(--font);
 }
 
 #app-name-welcome {
   font-style: oblique;
   font-weight: bold;
+  font-family: var(--font);
 }
 
 .main-page-links {
@@ -129,6 +135,7 @@ a:visited {
 .main-page-title {
   text-align: center;
   padding: 50px;
+  font-family: var(--font);
 }
 
 .form-container {
@@ -145,10 +152,15 @@ a:visited {
 .form-title {
   color: var(--color2);
   text-align: left;
+  font-family: var(--font);
 }
 
 .form-input {
   border: none;
+}
+
+.form-name {
+  font-family: var(--font);
 }
 
 .date-time-row {
@@ -165,6 +177,7 @@ a:visited {
 .profile-title {
   text-align: center;
   margin: 20px;
+  font-family: var(--font);
 }
 
 .profile-content {
@@ -178,6 +191,7 @@ a:visited {
 .list-title {
   text-align: center;
   margin: 20px;
+  font-family: var(--font);
 }
 
 .list-item-ro {
@@ -219,8 +233,3 @@ a:visited {
 #bold-words {
   font-weight: bold;
 }
-
-
-
-
-
