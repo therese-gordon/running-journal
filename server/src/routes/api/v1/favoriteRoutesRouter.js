@@ -3,13 +3,15 @@ import objection from "objection"
 const { ValidationError } = objection
 import { FavoriteRoute } from "../../../models/index.js";
 import cleanUserInput from "../../../services/cleanUserInput.js";
+import RouteSerializer from "../../../serializers/RouteSerializer.js";
 
 const favoriteRoutesRouter = new express.Router();
 
 favoriteRoutesRouter.get("/", async (req, res) => {
     try {
         const favoriteRoutes = await FavoriteRoute.query()
-        return res.status(200).json({ favoriteRoutes: favoriteRoutes})
+        const serializedRoutes = favoriteRoutes.map(route => RouteSerializer.getSummary(route))
+        return res.status(200).json({ favoriteRoutes: serializedRoutes })
     } catch (error) {
         return res.status(500).json({error: error})
     }
