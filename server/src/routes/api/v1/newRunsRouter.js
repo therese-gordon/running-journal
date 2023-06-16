@@ -3,13 +3,15 @@ import objection from "objection"
 const { ValidationError } = objection
 import { NewRun } from "../../../models/index.js"
 import cleanUserInput from "../../../services/cleanUserInput.js";
+import RunSerializer from "../../../serializers/RunSerializer.js";
 
 const newRunsRouter = new express.Router()
 
 newRunsRouter.get("/", async (req, res) => {
     try {
         const newRuns = await NewRun.query()
-        return res.status(200).json({ newRuns: newRuns })
+        const serializedRuns = newRuns.map(run => RunSerializer.getSummary(run))
+        return res.status(200).json({ newRuns: serializedRuns })
     } catch (error) {
         return res.status(500).json({error: error})
     }
