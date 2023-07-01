@@ -26,7 +26,7 @@ const NewRunsList = () => {
             <div className="list-item-ru" key={newRun.id}>
             <div><span id="bold-words">Name:</span> {newRun.routeName}</div>
             <div><span id="bold-words">Date:</span> {newRun.month} {newRun.day}, {newRun.year}</div>
-            <div><span id="bold-words">Time: </span>{newRun.hours} hours, {newRun.minutes} minutes, {newRun.seconds} seconds</div>
+            <div><span id="bold-words">Time: </span>{newRun.hours} hour(s), {newRun.minutes} minutes, {newRun.seconds} seconds</div>
             <div><span id="bold-words">Notes:</span> {newRun.notes}</div>
             <br></br>
             </div> 
@@ -34,8 +34,8 @@ const NewRunsList = () => {
     })
 
     return (
-        <div>
-        <h3 className="list-title">Your Completed Runs</h3>
+        <div className="list-page">
+        {/* <h3 className="list-title">Your Completed Runs</h3> */}
         <div className="list-items-ru">{runsList}</div>
         </div>
     )
