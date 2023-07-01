@@ -2,7 +2,6 @@
 @import "~foundation-sites/scss/foundation";
 @include foundation-everything;
 
-// place global css here
 *,
 *::before,
 *::after {
@@ -23,6 +22,11 @@
 body {
   background-color: #FFFFFF;
   font-family: var(--font);
+}
+
+.main-page {
+  text-align: center;
+  margin-top: 100px;
 }
 
 .welcome-page {
@@ -181,7 +185,7 @@ a:visited {
 }
 
 .profile-content {
-  border: 2px solid var(--color1);
+  background-color: var(--color3);
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -195,12 +199,13 @@ a:visited {
 }
 
 .list-item-ro {
-  width: 400px;
-  height: 75px;
+  width: 300px;
+  height: 70px;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
-  border: 2px solid var(--color1);
+  text-align: center;
+  background-color: var(--color3);
 }
 
 .list-items-ro {
@@ -213,12 +218,12 @@ a:visited {
 }
 
 .list-item-ru {
-  width: 600px;
-  height: 200px;
+  width: 670px;
+  height: 150px;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
-  border: 2px solid var(--color1);
+  background-color: var(--color3);
 }
 
 .list-items-ru {

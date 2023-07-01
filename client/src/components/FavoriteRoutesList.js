@@ -24,16 +24,18 @@ const FavoriteRoutesList = () => {
     const routesList = favoriteRoutes.map((favoriteRoute) => {
         return (
             <div className="list-item-ro" key={favoriteRoute.id}>
-            <div><span id="bold-words">Name:</span> {favoriteRoute.name}</div>
-            <div><span id="bold-words">Miles:</span> {favoriteRoute.distance}</div>
+            <div><span id="bold-words"></span> {favoriteRoute.name}</div>
+            <div>{favoriteRoute.distance} miles </div>
+            {/* <div><span id="bold-words"> {favoriteRoute.distance} miles</span> </div> */}
+            {/* <div><span id="bold-words">Miles:</span> {favoriteRoute.distance}</div> */}
             <br></br>
             </div> 
         )    
     })
 
     return (
-        <div>
-        <h3 className="list-title">Your Saved Routes</h3>
+        <div className="list-page">
+        {/* <h3 className="list-title">Your Saved Routes</h3> */}
         <div className="list-items-ro">{routesList}</div>
         </div>
     )
