@@ -5,7 +5,7 @@ const UserProfile = ({ user }) => {
     return (
         <div className="profile-page">
             <h3 className="profile-title">Account Information</h3>
-            <p className="profile-content">Strava Id: {user.stravaId}</p>
+            <p className="profile-content">Strava ID: {user.stravaId}</p>
         </div>
     )
 }

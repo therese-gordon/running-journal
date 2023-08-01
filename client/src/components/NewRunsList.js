@@ -35,7 +35,7 @@ const NewRunsList = () => {
 
     return (
         <div className="list-page">
-        {/* <h3 className="list-title">Your Completed Runs</h3> */}
+        <h3 className="list-title">Completed Runs</h3>
         <div className="list-items-ru">{runsList}</div>
         </div>
     )
